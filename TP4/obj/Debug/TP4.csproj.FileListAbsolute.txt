@@ -1,0 +1,77 @@
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\bin\Debug\TP4.exe.config
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\bin\Debug\TP4.exe
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\bin\Debug\TP4.pdb
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.exe
+C:\Users\Danilo\Documents\4k1 UTN\Simulacion\TP4\TP4\TP4\obj\Debug\TP4.pdb
+C:\Users\Leo\Desktop\TP4\TP4\bin\Debug\TP4.exe.config
+C:\Users\Leo\Desktop\TP4\TP4\bin\Debug\TP4.exe
+C:\Users\Leo\Desktop\TP4\TP4\bin\Debug\TP4.pdb
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.exe
+C:\Users\Leo\Desktop\TP4\TP4\obj\Debug\TP4.pdb
+C:\Users\Danilo\Downloads\TP4\TP4\bin\Debug\TP4.exe.config
+C:\Users\Danilo\Downloads\TP4\TP4\bin\Debug\TP4.exe
+C:\Users\Danilo\Downloads\TP4\TP4\bin\Debug\TP4.pdb
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.exe
+C:\Users\Danilo\Downloads\TP4\TP4\obj\Debug\TP4.pdb
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\bin\Debug\TP4.exe.config
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\bin\Debug\TP4.exe
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\bin\Debug\TP4.pdb
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.Form1.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.exe
+C:\PROYECTOS_DEV\FACU\SIM\TP4 FINAL\TP4\obj\Debug\TP4.pdb
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.exe
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.pdb
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\bin\Debug\TP4.exe.config
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\bin\Debug\TP4.exe
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\bin\Debug\TP4.pdb
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.exe
+C:\PROYECTOS_DEV\FACU\SIM\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4_Aresu, Barella, Bruna, Loza, Micheletti,Soruco\TP4\TP4\obj\Debug\TP4.pdb
+G:\Descargas\Proyectos\TP4\TP4\bin\Debug\TP4.exe.config
+G:\Descargas\Proyectos\TP4\TP4\bin\Debug\TP4.exe
+G:\Descargas\Proyectos\TP4\TP4\bin\Debug\TP4.pdb
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.Form1.resources
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.exe
+G:\Descargas\Proyectos\TP4\TP4\obj\Debug\TP4.pdb
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\bin\Debug\TP4.exe.config
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\bin\Debug\TP4.exe
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\bin\Debug\TP4.pdb
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.Form1.resources
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.exe
+C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.pdb
