@@ -75,3 +75,13 @@ C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.csproj.GenerateResourc
 C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
 C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.exe
 C:\Users\Barellas\Documents\Mar\TP4\TP4\TP4\obj\Debug\TP4.pdb
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.csprojAssemblyReference.cache
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.Form1.resources
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.Properties.Resources.resources
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.csproj.GenerateResource.cache
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.csproj.CoreCompileInputs.cache
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.exe
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\obj\Debug\TP4.pdb
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\bin\Debug\TP4.exe.config
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\bin\Debug\TP4.exe
+C:\Users\Martin\Documents\UTN - FRC\2021\Simulacion\TP4-SIM-4K2-2021\TP4\bin\Debug\TP4.pdb

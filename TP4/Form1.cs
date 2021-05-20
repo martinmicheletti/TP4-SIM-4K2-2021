@@ -18,178 +18,236 @@ namespace TP4
         public Form1()
         {
             InitializeComponent();
+            rdbPoliticaA.Checked = true;
         }
 
         private void btnGenerar_Click_1(object sender, EventArgs e)
         {
-            int Dias = Convert.ToInt32(txtDiasAVisualizar.Text);
-            int Vista = Convert.ToInt32(txtVista.Text);
-            int DiasASimular = Convert.ToInt32(txtDiasASimular.Text);
-            dgvAux2.Rows.Clear();
-            dgvAux2.Refresh();
-            dgvAux.Rows.Clear();
-            dgvAux.Refresh();
-
-
-            Random rand_demanda = new Random();
-            double RNDDemanda = 0;
-
-            Random rand_demora = new Random();
-            
-            double demanda = 0;
-            
-            Boolean Llega_Pedido;
-            double stock = 20;
-            double KP = 0;
-            double KM = 3;
-            double KS = 4;
-            double CantidadAPedirA = 180;
-            int CantidadAPedirB = 0;
-            int p = 0;
-            demanda = 0;
-            double costo_mantenimiento = 0;
-            double costo_faltante = 0;
-            int disponible = 0;
-            double total = 0;
-            double totalacu = 0;
-
-
-
-            List<DataGridViewRow> listaFilas = new List<DataGridViewRow>();
-            List<DataGridViewRow> listaFilas2 = new List<DataGridViewRow>();
-            for (int i = 0; i < DiasASimular; i++)
+            if (validarInputs())
             {
-                Boolean hago_pedido = false;
-                double costo_pedido = 0;
-                double RNDDemora = 0;
-                int demora = 0;
-       
 
-                if (i == 0)
+
+                // Cantidad de dias a simular 
+                int DiasASimular = Convert.ToInt32(txtDiasASimular.Text);
+
+                // Cantidad de dias a visualizar
+                int Dias = Convert.ToInt32(txtDiasAVisualizar.Text);
+
+                // Desde el dia: 
+                int Vista = Convert.ToInt32(txtVista.Text);
+
+                double diasEntrePedidos = Convert.ToDouble(txtDiasEntrePedidos.Text);
+
+                // Limpio las tablas
+                //dgvAux2.Rows.Clear();
+                //dgvAux2.Refresh();
+                dgvAux.Rows.Clear();
+                dgvAux.Refresh();
+
+
+                Random rand_demanda = new Random();
+                double RNDDemanda = 0;
+
+                Random rand_demora = new Random();
+                double demanda = 0;
+
+                Boolean Llega_Pedido;
+
+                double stock = 20;
+
+                double KP = 0;
+
+                // Costo mantenimiento
+                double KM = 3;
+
+                // Costo por faltante
+                double KS = 4;
+
+                double CantidadAPedirA = 0;
+
+                if (txtCantidadAPedir.Text != "")
                 {
-                    stock = 20;
-                    Llega_Pedido = false;
-                }
-                else 
-                {
-                    RNDDemanda = Math.Round(rand_demanda.NextDouble(), 2);
-                    demanda = CalcularDemanda(RNDDemanda);
-
-                    if (i == 1)
-                    {
-                        hago_pedido = true;
-                        total = costo_pedido + costo_faltante + costo_mantenimiento;
-
-
-                    }
-
-
-                    if (i % 7 == 0)
-                    {
-                        hago_pedido = true;
-                        //para politica a
-
-                    }
-
-
-                    if (hago_pedido) 
-                    {
-                        RNDDemora = Math.Round(rand_demora.NextDouble(), 2);
-                        demora = CalcularDemoraPedido(RNDDemora);
-                        disponible = CuandoLlega(i, demora);
-                        costo_pedido = CalcularCostoPedidoPedido(CantidadAPedirA);
-                    }
-
-
-                    if (disponible ==i)
-                    {
-                        stock = stock + CantidadAPedirA;
-                        disponible = 0;
-                        
-
-                    }
-
-                    stock = stock - demanda;
-                    if (stock < 0)
-                    {
-                        stock = 0;
-                        costo_faltante = (demanda-stock)*KS;
-
-                    }
-
-                    costo_mantenimiento = stock * KM;
-                    total = costo_mantenimiento + costo_faltante + costo_pedido;
-                    totalacu += total;
+                    CantidadAPedirA = Convert.ToDouble(txtCantidadAPedir.Text);
                 }
 
+                double CantidadAPedirB = 0;
 
-                if(i >= Vista && i < Vista+Dias)
+                int p = 0;
+                double costo_mantenimiento = 0;
+                double costo_faltante = 0;
+                int disponible = 0;
+                double total = 0;
+                double totalacu = 0;
+
+                int cantidadDiasEntrePedidosPoliticaA = 7;
+                int cantidadDiasEntrePedidosPoliticaB = 10;
+
+                double acumuladorDemandaPoliticaB = 0;
+
+                List<DataGridViewRow> listaFilas = new List<DataGridViewRow>();
+                List<DataGridViewRow> listaFilas2 = new List<DataGridViewRow>();
+
+                for (int i = 0; i < DiasASimular; i++)
                 {
-                    dgvAux.Rows.Add();
+                    Boolean hago_pedido = false;
+                    double costo_pedido = 0;
+                    double RNDDemora = 0;
+                    int demora = 0;
 
-                    dgvAux.Rows[i - Vista].Cells[0].Value = i;
+                    if (i == 0)
+                    {
+                        stock = 20;
+                        Llega_Pedido = false;
+                    }
+                    else
+                    {
+                        RNDDemanda = Math.Round(rand_demanda.NextDouble(), 2);
+                        demanda = CalcularDemanda(RNDDemanda);
 
-                    dgvAux.Rows[i - Vista].Cells[1].Value = RNDDemanda;
+                        acumuladorDemandaPoliticaB += demanda;
 
-                    dgvAux.Rows[i - Vista].Cells[2].Value = demanda;
+                        if (i == 1)
+                        {
+                            // El primer dia hago un pedido (enunciado)
+                            hago_pedido = true;
+                            //total = costo_pedido + costo_faltante + costo_mantenimiento;
+                            // En el caso de la Politica B, se piden los ingresados por parametro o solo los demandados ese primer dia?
+                        }
 
-                    dgvAux.Rows[i - Vista].Cells[3].Value = RNDDemora;
+                        if (rdbPoliticaA.Checked)
+                        {
+                            if (i % diasEntrePedidos == 0)
+                            {
+                                hago_pedido = true;
+                            }
 
-                    dgvAux.Rows[i - Vista].Cells[4].Value = demora;
+                            if (hago_pedido)
+                            {
+                                RNDDemora = Math.Round(rand_demora.NextDouble(), 2);
+                                demora = CalcularDemoraPedido(RNDDemora);
+                                disponible = CuandoLlega(i, demora);
+                                costo_pedido = CalcularCostoPedidoPedido(CantidadAPedirA);
+                            }
 
-                    dgvAux.Rows[i - Vista].Cells[5].Value = hago_pedido;
+                            // Si llega un pedido
+                            if (disponible == i)
+                            {
+                                stock += CantidadAPedirA;
+                                disponible = 0;
+                            }
+                        }
 
-                    dgvAux.Rows[i - Vista].Cells[6].Value = disponible;
+                        if (rdbPoliticaB.Checked)
+                        {
+                            if (i % diasEntrePedidos == 0)
+                            {
+                                hago_pedido = true;
+                            }
 
-                    dgvAux.Rows[i - Vista].Cells[7].Value = stock;
+                            if (hago_pedido)
+                            {
+                                RNDDemora = Math.Round(rand_demora.NextDouble(), 2);
+                                demora = CalcularDemoraPedido(RNDDemora);
+                                disponible = CuandoLlega(i, demora);
+                                // La cantidad a pedir debe ser la suma de la demanda 
+                                // de los ultimos 10 + el dia actual
 
-                    dgvAux.Rows[i - Vista].Cells[8].Value = costo_pedido;
+                                CantidadAPedirB += acumuladorDemandaPoliticaB;
 
-                    dgvAux.Rows[i - Vista].Cells[9].Value = costo_mantenimiento;
+                                costo_pedido = CalcularCostoPedidoPedido(CantidadAPedirB);
 
-                    dgvAux.Rows[i - Vista].Cells[10].Value = costo_faltante;
+                                // Reinicio el acumulador para que cuente los 10 dias posteriores
+                                acumuladorDemandaPoliticaB = 0;
+                            }
 
-                    dgvAux.Rows[i - Vista].Cells[11].Value = total;
+                            // Si llega un pedido
+                            if (disponible == i)
+                            {
+                                stock += CantidadAPedirB;
+                                disponible = 0;
+                                CantidadAPedirB = 0;
+                            }
+                        }
 
-                    dgvAux.Rows[i - Vista].Cells[12].Value = totalacu;
+                        stock -= demanda;
+
+                        if (stock < 0)
+                        {
+                            stock = 0;
+                            costo_faltante = (demanda - stock) * KS;
+                        }
+
+                        costo_mantenimiento = stock * KM;
+                        total = costo_mantenimiento + costo_faltante + costo_pedido;
+                        totalacu += total;
+                    }
 
 
-
-
-                }
-                if (i == DiasASimular-1) {
+                    if (i >= Vista && i < Vista + Dias)
                     {
                         dgvAux.Rows.Add();
 
-                        dgvAux.Rows[Dias].Cells[0].Value = i;
+                        dgvAux.Rows[i - Vista].Cells[0].Value = i;
 
-                        dgvAux.Rows[Dias].Cells[1].Value = RNDDemanda;
+                        dgvAux.Rows[i - Vista].Cells[1].Value = RNDDemanda;
 
-                        dgvAux.Rows[Dias].Cells[2].Value = demanda;
+                        dgvAux.Rows[i - Vista].Cells[2].Value = demanda;
 
-                        dgvAux.Rows[Dias].Cells[3].Value = RNDDemora;
+                        dgvAux.Rows[i - Vista].Cells[3].Value = RNDDemora;
 
-                        dgvAux.Rows[Dias].Cells[4].Value = demora;
+                        dgvAux.Rows[i - Vista].Cells[4].Value = demora;
 
-                        dgvAux.Rows[Dias].Cells[5].Value = hago_pedido;
+                        dgvAux.Rows[i - Vista].Cells[5].Value = hago_pedido ? "Hago pedido" : "";
 
-                        dgvAux.Rows[Dias].Cells[6].Value = disponible;
+                        dgvAux.Rows[i - Vista].Cells[6].Value = disponible;
 
-                        dgvAux.Rows[Dias].Cells[7].Value = stock;
+                        dgvAux.Rows[i - Vista].Cells[7].Value = stock;
 
-                        dgvAux.Rows[Dias].Cells[8].Value = costo_pedido;
+                        dgvAux.Rows[i - Vista].Cells[8].Value = costo_pedido;
 
-                        dgvAux.Rows[Dias].Cells[9].Value = costo_mantenimiento;
+                        dgvAux.Rows[i - Vista].Cells[9].Value = costo_mantenimiento;
 
-                        dgvAux.Rows[Dias].Cells[10].Value = costo_faltante;
+                        dgvAux.Rows[i - Vista].Cells[10].Value = costo_faltante;
 
-                        dgvAux.Rows[Dias].Cells[11].Value = total;
+                        dgvAux.Rows[i - Vista].Cells[11].Value = total;
 
-                        dgvAux.Rows[Dias].Cells[12].Value = totalacu;
+                        dgvAux.Rows[i - Vista].Cells[12].Value = totalacu;
+
+                    }
+
+                    if (i == DiasASimular - 1)
+                    {
+                        {
+                            dgvAux.Rows.Add();
+
+                            dgvAux.Rows[Dias].Cells[0].Value = i;
+
+                            dgvAux.Rows[Dias].Cells[1].Value = RNDDemanda;
+
+                            dgvAux.Rows[Dias].Cells[2].Value = demanda;
+
+                            dgvAux.Rows[Dias].Cells[3].Value = RNDDemora;
+
+                            dgvAux.Rows[Dias].Cells[4].Value = demora;
+
+                            dgvAux.Rows[Dias].Cells[5].Value = hago_pedido ? "Hago pedido" : "";
+
+                            dgvAux.Rows[Dias].Cells[6].Value = disponible;
+
+                            dgvAux.Rows[Dias].Cells[7].Value = stock;
+
+                            dgvAux.Rows[Dias].Cells[8].Value = costo_pedido;
+
+                            dgvAux.Rows[Dias].Cells[9].Value = costo_mantenimiento;
+
+                            dgvAux.Rows[Dias].Cells[10].Value = costo_faltante;
+
+                            dgvAux.Rows[Dias].Cells[11].Value = total;
+
+                            dgvAux.Rows[Dias].Cells[12].Value = totalacu;
+                        }
                     }
                 }
-
-
             }
         }
 
@@ -223,7 +281,6 @@ namespace TP4
             }
             return Demanda;
         }
-
 
         private int CalcularDemoraPedido(double rnd)
         {
@@ -278,25 +335,51 @@ namespace TP4
             return Costo;
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtDias_TextChanged(object sender, EventArgs e)
+        private bool validarInputs()
         {
-
+            if (rdbPoliticaA.Checked)
+            {
+                if (txtCantidadAPedir.TextLength == 0)
+                {
+                    MessageBox.Show("Por favor, ingrese todos los datos necesarios");
+                    return false;
+                }
+            }
+            if ((txtDiasASimular.TextLength == 0) 
+                || (txtDiasAVisualizar.TextLength == 0) 
+                || (txtVista.TextLength == 0) 
+                || (txtDiasEntrePedidos.TextLength == 0))
+            {
+                MessageBox.Show("Por favor, ingrese todos los datos necesarios");
+                return false;
+            }
+            return true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void rdbPoliticaB_CheckedChanged(object sender, EventArgs e)
         {
-
+            txtCantidadAPedir.Enabled = false;
         }
 
-        private void dgvAux_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void rdbPoliticaA_CheckedChanged(object sender, EventArgs e)
         {
+            txtCantidadAPedir.Enabled = true;
+        }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dgvAux.Rows.Clear();
+            dgvAux.Refresh();
+            txtCantidadAPedir.Text = "";
+            txtDiasASimular.Text = "";
+            txtDiasAVisualizar.Text = "";
+            txtDiasEntrePedidos.Text = "";
+            txtVista.Text = "";
         }
     }
 }
