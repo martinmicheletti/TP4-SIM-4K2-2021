@@ -52,6 +52,8 @@ namespace TP4
                     Random rand_demora = new Random();
                     double demanda = 0;
 
+                    double venta = 0;
+
                     Boolean Llega_Pedido;
 
                     double stock = 20;
@@ -170,13 +172,20 @@ namespace TP4
                                 }
                             }
 
-                            stock -= demanda;
+                            venta = (demanda > stock) ? stock : demanda;
 
-                            if (stock < 0)
+                            stock -= venta;
+
+                            costo_faltante = (demanda > stock) ? ((demanda - stock) * KS) : 0;
+
+                            /*if (stock < 0)
                             {
                                 stock = 0;
-                                costo_faltante = (demanda - stock) * KS;
-                            }
+
+                                
+
+                                //costo_faltante = (demanda - stock) * KS;
+                            }*/
 
                             costo_mantenimiento = stock * KM;
                             total = costo_mantenimiento + costo_faltante + costo_pedido;
@@ -194,25 +203,27 @@ namespace TP4
 
                             dgvAux.Rows[i - Vista].Cells[2].Value = demanda;
 
-                            dgvAux.Rows[i - Vista].Cells[3].Value = RNDDemora;
+                            dgvAux.Rows[i - Vista].Cells[3].Value = venta;
 
-                            dgvAux.Rows[i - Vista].Cells[4].Value = demora;
+                            dgvAux.Rows[i - Vista].Cells[4].Value = stock;
 
                             dgvAux.Rows[i - Vista].Cells[5].Value = hago_pedido ? "Hago pedido" : "";
 
-                            dgvAux.Rows[i - Vista].Cells[6].Value = disponible;
+                            dgvAux.Rows[i - Vista].Cells[6].Value = RNDDemora;
 
-                            dgvAux.Rows[i - Vista].Cells[7].Value = stock;
+                            dgvAux.Rows[i - Vista].Cells[7].Value = demora;
 
-                            dgvAux.Rows[i - Vista].Cells[8].Value = costo_pedido;
+                            dgvAux.Rows[i - Vista].Cells[8].Value = disponible;
 
-                            dgvAux.Rows[i - Vista].Cells[9].Value = costo_mantenimiento;
+                            dgvAux.Rows[i - Vista].Cells[9].Value = costo_pedido;
 
-                            dgvAux.Rows[i - Vista].Cells[10].Value = costo_faltante;
+                            dgvAux.Rows[i - Vista].Cells[10].Value = costo_mantenimiento;
 
-                            dgvAux.Rows[i - Vista].Cells[11].Value = total;
+                            dgvAux.Rows[i - Vista].Cells[11].Value = costo_faltante;
 
-                            dgvAux.Rows[i - Vista].Cells[12].Value = totalacu;
+                            dgvAux.Rows[i - Vista].Cells[12].Value = total;
+
+                            dgvAux.Rows[i - Vista].Cells[13].Value = totalacu;
 
                         }
 
@@ -227,25 +238,27 @@ namespace TP4
 
                                 dgvAux.Rows[Dias].Cells[2].Value = demanda;
 
-                                dgvAux.Rows[Dias].Cells[3].Value = RNDDemora;
+                                dgvAux.Rows[Dias].Cells[3].Value = venta;
 
-                                dgvAux.Rows[Dias].Cells[4].Value = demora;
+                                dgvAux.Rows[Dias].Cells[4].Value = stock;
 
                                 dgvAux.Rows[Dias].Cells[5].Value = hago_pedido ? "Hago pedido" : "";
 
-                                dgvAux.Rows[Dias].Cells[6].Value = disponible;
+                                dgvAux.Rows[Dias].Cells[6].Value = RNDDemora;
 
-                                dgvAux.Rows[Dias].Cells[7].Value = stock;
+                                dgvAux.Rows[Dias].Cells[7].Value = demora;
 
-                                dgvAux.Rows[Dias].Cells[8].Value = costo_pedido;
+                                dgvAux.Rows[Dias].Cells[8].Value = disponible;
 
-                                dgvAux.Rows[Dias].Cells[9].Value = costo_mantenimiento;
+                                dgvAux.Rows[Dias].Cells[9].Value = costo_pedido;
 
-                                dgvAux.Rows[Dias].Cells[10].Value = costo_faltante;
+                                dgvAux.Rows[Dias].Cells[10].Value = costo_mantenimiento;
 
-                                dgvAux.Rows[Dias].Cells[11].Value = total;
+                                dgvAux.Rows[Dias].Cells[11].Value = costo_faltante;
 
-                                dgvAux.Rows[Dias].Cells[12].Value = totalacu;
+                                dgvAux.Rows[Dias].Cells[12].Value = total;
+
+                                dgvAux.Rows[Dias].Cells[13].Value = totalacu;
                             }
                         }
                     }
