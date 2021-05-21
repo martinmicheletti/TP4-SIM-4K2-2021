@@ -215,15 +215,15 @@ namespace TP4
 
                             dgvAux.Rows[i - Vista].Cells[8].Value = disponible;
 
-                            dgvAux.Rows[i - Vista].Cells[9].Value = costo_pedido;
+                            dgvAux.Rows[i - Vista].Cells[9].Value = "$ " + costo_pedido.ToString();
 
-                            dgvAux.Rows[i - Vista].Cells[10].Value = costo_mantenimiento;
+                            dgvAux.Rows[i - Vista].Cells[10].Value = "$ " + costo_mantenimiento.ToString();
 
-                            dgvAux.Rows[i - Vista].Cells[11].Value = costo_faltante;
+                            dgvAux.Rows[i - Vista].Cells[11].Value = "$ " + costo_faltante.ToString();
 
-                            dgvAux.Rows[i - Vista].Cells[12].Value = total;
+                            dgvAux.Rows[i - Vista].Cells[12].Value = "$ " + total.ToString();
 
-                            dgvAux.Rows[i - Vista].Cells[13].Value = totalacu;
+                            dgvAux.Rows[i - Vista].Cells[13].Value = "$ " + totalacu.ToString();
 
                         }
 
@@ -250,15 +250,15 @@ namespace TP4
 
                                 dgvAux.Rows[Dias].Cells[8].Value = disponible;
 
-                                dgvAux.Rows[Dias].Cells[9].Value = costo_pedido;
+                                dgvAux.Rows[Dias].Cells[9].Value = "$ " + costo_pedido.ToString();
 
-                                dgvAux.Rows[Dias].Cells[10].Value = costo_mantenimiento;
+                                dgvAux.Rows[Dias].Cells[10].Value = "$ " + costo_mantenimiento.ToString();
 
-                                dgvAux.Rows[Dias].Cells[11].Value = costo_faltante;
+                                dgvAux.Rows[Dias].Cells[11].Value = "$ " + costo_faltante.ToString();
 
-                                dgvAux.Rows[Dias].Cells[12].Value = total;
+                                dgvAux.Rows[Dias].Cells[12].Value = "$ " + total.ToString();
 
-                                dgvAux.Rows[Dias].Cells[13].Value = totalacu;
+                                dgvAux.Rows[Dias].Cells[13].Value = "$ " + totalacu.ToString();
                             }
                         }
                     }
